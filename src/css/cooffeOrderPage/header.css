@@ -1,0 +1,74 @@
+.header {
+  background-color: #2a2a2a;
+  padding: 0 24px;
+  height: 236px;
+}
+
+.conteiner-location {
+  color: #fff;
+  padding: 24px 0;
+}
+
+.location-title {
+  color: #a2a2a2;
+  padding-bottom: 8px;
+  font-size: 12px;
+  letter-spacing: 1%;
+  line-height: 120%;
+}
+
+.location-form {
+  color: #fff;
+  background-color: inherit;
+  border: none;
+}
+
+.search {
+  background: linear-gradient(
+    to right,
+    rgba(180, 180, 180, 0),
+    rgba(162, 162, 162, 0.1)
+  );
+  border: none;
+  border-radius: 12px;
+  padding: 17.5px 0 17.5px 44px;
+  margin: 0 16px 24px 0;
+  width: 210px;
+}
+
+.filter {
+  background-color: #c67c4e;
+  padding: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.filter:hover {
+  background-color: #8a5432;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.filter:focus {
+  background-color: #8a5432;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.banner {
+  background-image: url('../../../public/image/banner.jpg');
+  width: 327px;
+  border-radius: 12px;
+  color: #fff;
+}
+
+.promo {
+  color: #fff;
+  background-color: #ed5151;
+  border-radius: 8px;
+  margin: 13px, 0px, 8px, 24px;
+  padding: 4px 6px;
+}
+
+.banner-title {
+  padding: 27px 99px 13px 24px;
+  margin: 0;
+}

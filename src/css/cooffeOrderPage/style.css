@@ -1,0 +1,7 @@
+@import url('./header.css');
+
+body {
+  margin: 0 auto;
+  width: 375px;
+  font-family: Sora, sans-serif;
+}

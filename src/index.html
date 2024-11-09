@@ -3,16 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>Coffe Order</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/homePega/style.css" />
+    <title>Home Page</title>
   </head>
   <body>
-    <img src="../public/image/6.jpg" alt="Coffee Shops Home Page" />
-    <h1>Fall in Love with Coffee in Blisful Delight</h1>
-    <p>
-      Welcome to our cozy coffee corner, where every cup is a delightful for
-      you.
-    </p>
-    <button>Get Started</button>
+    <div class="homepage-container">
+      <img
+        class="homepage-background-image"
+        src="../public/image/6.jpg"
+        alt="Coffee Shops Home Page"
+      />
+
+      <div class="homepage-content">
+        <h1 class="homepage-title">
+          Fall in Love with Coffee in Blissful Delight!
+        </h1>
+
+        <p class="homepage-description">
+          Welcome to our cozy coffee corner, where every cup is a delightful for
+          you.
+        </p>
+
+        <button
+          class="homepage-start-button"
+          type="button"
+          onclick="goToCoffeeOrder()"
+        >
+          Get Started
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function goToCoffeeOrder() {
+        window.location.href = 'coffeeOrder.html';
+      }
+    </script>
   </body>
 </html>
