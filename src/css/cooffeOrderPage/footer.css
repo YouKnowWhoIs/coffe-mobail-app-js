@@ -1,0 +1,14 @@
+.footer {
+  position: relative;
+}
+
+.conteiner-footer {
+  background-color: #2a2a2a;
+  color: #ededed;
+  bottom: 0;
+  position: fixed;
+}
+
+.made-footer {
+  padding: 15px 140.5px 70px 24px;
+}

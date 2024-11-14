@@ -1,0 +1,44 @@
+.select-coffee {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 16px;
+  margin: 0 24px;
+}
+
+.input-decoration {
+  display: none;
+}
+.select-coffee::-webkit-scrollbar {
+  display: none;
+}
+
+.coffee-optional {
+  background-color: #ededed;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+  white-space: nowrap;
+}
+.coffee-optional:hover {
+  background-color: #dedede;
+}
+label:has(input[type='radio']:checked) {
+  border-color: #111;
+}
+
+.active-coffee-optional {
+  background-color: #c67c4e;
+  color: #fff;
+  white-space: nowrap;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.cursor {
+  cursor: pointer;
+}
