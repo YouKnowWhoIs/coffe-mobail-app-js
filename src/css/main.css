@@ -1,9 +1,11 @@
 .select-coffee {
+  width: 327px;
+  margin: 0 auto;
+  margin-bottom: 24px;
   display: flex;
   flex-direction: row;
   overflow-x: auto;
   gap: 16px;
-  margin: 0 24px;
 }
 
 .input-decoration {

@@ -1,10 +1,4 @@
-const express = require('express');
-const app = express();
-const PORT = 3000;
-
-app.use(express.json());
-
-let coffees = [
+const coffees = [
   {
     id: 1,
     type: 'Espresso',
@@ -172,27 +166,4 @@ let coffees = [
   },
 ];
 
-app.get('/api/coffees/all', (req, res) => {
-  res.json(coffees);
-});
-
-app.get('/api/coffees/:id', (req, res) => {
-  const coffee = coffees.find(c => c.id === pardeInt(req.params.id));
-  if (!coffee) {
-    return res.status(404).send('Coffees not found.');
-  }
-  res.json(coffee);
-});
-
-app.get('/api/coffees/:type', (req, res) => {
-  const coffeeType = req.params.type;
-  const filterCoffee = coffees.filter(c => c.type === coffeeType);
-  if (!filterCoffee.length === 0) {
-    return res.status(404).send('Coffees not found.');
-  }
-  res.json(filterCoffee);
-});
-
-app.listen(PORT, () => {
-  console.log(`Server port ${PORT}`);
-});
+export default coffees;

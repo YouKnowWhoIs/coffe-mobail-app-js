@@ -1,19 +1,30 @@
-body {
+.modal-welcome {
+  position: fixed;
   background-color: #050505;
-  width: 375px;
-  margin: 0 auto;
-  font-family: Sora, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 999;
 }
 
-.homepage-container {
-  position: relative;
+.welcome-container {
+  position: fixed;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  max-width: 90%;
+  min-width: 300px;
 }
 
-.homepage-background-image {
+.welcome-container-hidden {
+  display: none;
+}
+
+.welcome-background-image {
   position: absolute;
 }
 
-.homepage-content {
+.welcome-content {
   position: absolute;
   z-index: 1;
   color: #fff;
@@ -23,7 +34,7 @@ body {
   margin-top: 453px;
 }
 
-.homepage-title {
+.welcome-title {
   padding: 0;
   margin: 0;
   font-size: 32px;
@@ -32,7 +43,7 @@ body {
   font-weight: 600;
 }
 
-.homepage-description {
+.welcome-description {
   color: #a2a2a2;
   font-size: 14px;
   letter-spacing: 1%;
@@ -40,7 +51,7 @@ body {
   margin: 8px 0 32px 0;
 }
 
-.homepage-start-button {
+.welcome-button {
   color: #fff;
   line-height: 150%;
   font-size: 16px;
@@ -50,13 +61,13 @@ body {
   width: 327px;
   padding: 16px 0;
 }
-.buttonGetStart:hover {
+.welcome-button:hover {
   background-color: #8a5432;
-  border: 1px solid #fff;
+  border: 0 solid #fff;
   cursor: pointer;
 }
-.buttonGetStart:focus {
+.welcome-button:focus {
   background-color: #8a5432;
-  border: 1px solid #fff;
+  border: 0 solid #fff;
   cursor: pointer;
 }

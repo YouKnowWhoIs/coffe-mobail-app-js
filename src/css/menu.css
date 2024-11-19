@@ -1,3 +1,7 @@
+.panel-conteiner {
+  display: flex;
+  justify-content: center;
+}
 .panel {
   background-color: #ededed;
   display: flex;
@@ -7,7 +11,7 @@
   border-top-right-radius: 16px;
   position: fixed;
   bottom: 0;
-  z-index: 1000;
+  z-index: 5;
 }
 
 .icon {

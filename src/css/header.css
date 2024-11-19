@@ -1,8 +1,10 @@
 .header {
+  width: 327px;
+  margin: 0 auto;
+  margin-bottom: 95px;
   background-color: #2a2a2a;
   padding: 0 24px;
   height: 236px;
-  margin: 0 0 95px 0;
 }
 
 .conteiner-location {
@@ -26,8 +28,12 @@
 
 .seting-conteiner {
   display: flex;
-  gap: 16px;
   justify-content: center;
+}
+
+.search-conteiner {
+  position: relative;
+  display: inline-block;
 }
 
 .search {
@@ -39,8 +45,16 @@
   border: none;
   border-radius: 12px;
   padding: 17.5px 0 17.5px 44px;
-  margin: 0 0 24px 0;
-  width: 210px;
+  margin: 0 16px 24px 0;
+  width: 214px;
+}
+
+.search-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  padding: 16px 8px 16px 16px;
 }
 
 .seting-icon {

@@ -9,41 +9,177 @@
       href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/homePega/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Home Page</title>
   </head>
   <body>
-    <div class="homepage-container">
-      <img
-        class="homepage-background-image"
-        src="../public/image/6.jpg"
-        alt="Coffee Shops Home Page"
-      />
+<header class="header">
+      <div class="conteiner-location">
+        <span class="location-title">Location</span>
+        <form>
+          <select class="location-form" id="location" name="location">
+            <option value="Ukraine Lviv">Ukraine, Lviv</option>
+            <option value="Ukraine Kiew">Ukraine, Kiew</option>
+            <option value="Ukraine Rivne">Ukraine, Rivne</option>
+            <option value="Ukraine Odesa">Ukraine, Odesa</option>
+          </select>
+        </form>
+      </div>
+      <div class="seting-conteiner">
+        <span class="search-conteiner">
+          <svg class="search-icon">
+            <use href="../public/icon/symbol-defs.svg#icon-search">
+          </svg>
+          <input class="search" placeholder="Search coffee" />
+        </span>
+          <svg class="seting-icon">
+            <use href="../public/icon/symbol-defs.svg#icon-equalizer">
+          </svg>
+      </div>
+      <div class="banner">
+        <span class="promo">Promo</span>
+        <h1 class="banner-title">Buy one get <span>one FREE</span></h1>
+      </div>
+    </header>
+    <main class="main">
+      <div class="select-coffee">
+        <span class="active-coffee-optional">
+          <input
+            class="input-decoration"
+            type="radio"
+            value="all coffee"
+            name="coffee"
+            id="all-coffee"
+            checked
+          />
+          <label class="cursor" for="all-coffee">All Coffee</label>
+        </span>
 
-      <div class="homepage-content">
-        <h1 class="homepage-title">
-          Fall in Love with Coffee in Blissful Delight!
-        </h1>
+        <span class="coffee-optional">
+          <input
+            class="input-decoration"
+            type="radio"
+            value="cappuccino"
+            name="coffee"
+            id="cappuccino"
+          />
+          <label class="cursor" for="cappuccino">Cappuccino</label>
+        </span>
 
-        <p class="homepage-description">
-          Welcome to our cozy coffee corner, where every cup is a delightful for
-          you.
-        </p>
+        <span class="coffee-optional">
+          <input
+            class="input-decoration"
+            type="radio"
+            value="latte"
+            name="coffee"
+            id="latte"
+          />
+          <label class="cursor" for="latte">Latte</label>
+        </span>
 
-        <button
-          class="homepage-start-button"
-          type="button"
-          onclick="goToCoffeeOrder()"
-        >
-          Get Started
-        </button>
+        <span class="coffee-optional">
+          <input
+            class="input-decoration"
+            type="radio"
+            value="americano"
+            name="coffee"
+            id="americano"
+          />
+          <label class="cursor" for="americano">Americano</label>
+        </span>
+
+        <span class="coffee-optional">
+          <input
+            class="input-decoration"
+            type="radio"
+            value="machiato"
+            name="coffee"
+            id="machiato"
+          />
+          <label class="cursor" for="machiato">Machiato</label>
+        </span>
+
+        <span class="coffee-optional">
+          <input
+            class="input-decoration"
+            type="radio"
+            value="mocha"
+            name="coffee"
+            id="mocha"
+          />
+          <label class="cursor" for="mocha">Mocha</label>
+        </span>
+      </div>
+
+      <div>
+        <ul class="coffees-list"></ul>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="conteiner-footer">
+        <p class="Create-footer">Create: <b>Yakymiuk Kateryna</b></p>
+      </div>
+    </footer>
+
+    <div class="panel-conteiner">
+      <div class="panel">
+        <span class="icon active-icon">
+          <svg class="icon-home" style="width: 24; height: 24">
+            <use xlink:href="../public/icon/symbol-defs.svg#icon-home"></use>
+          </svg>
+        </span>
+  
+        <span class="icon">
+          <svg class="icon" style="width: 20; height: 20">
+            <use xlink:href="../public/icon/symbol-defs.svg#icon-heart"></use>
+          </svg>
+        </span>
+  
+        <span class="icon">
+          <svg class="icon" style="width: 20; height: 21">
+            <use
+              xlink:href="../public/icon/symbol-defs.svg#icon-shopping-basket"
+            ></use>
+          </svg>
+        </span>
+  
+        <span class="icon">
+          <svg class="icon" style="width: 18; height: 22">
+            <use xlink:href="../public/icon/symbol-defs.svg#icon-bell"></use>
+          </svg>
+        </span>
       </div>
     </div>
 
-    <script>
-      function goToCoffeeOrder() {
-        window.location.href = 'coffeeOrder.html';
-      }
-    </script>
+    <div class="modal-welcome" hidden>
+      <div class="welcome-container">
+        <img
+          class="welcome-background-image"
+          src="../public/image/6.jpg"
+          alt="Coffee Shops Home Page"
+        />
+  
+        <div class="welcome-content">
+          <h1 class="welcome-title">
+            Fall in Love with Coffee in Blissful Delight!
+          </h1>
+  
+          <p class="welcome-description">
+            Welcome to our cozy coffee corner, where every cup is a delightful for
+            you.
+          </p>
+  
+          <button class="welcome-button" type="button">
+            Get Started
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-order-coffee"></div>
+
+
+    <script type="module" src="./js/coffeeList.js"></script>
+    <script src="./js/modalWelkome.js"></script>
   </body>
 </html>
