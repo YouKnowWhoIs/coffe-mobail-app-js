@@ -1,0 +1,14 @@
+.footer {
+  width: 375px;
+  margin: 0 auto;
+}
+
+.conteiner-footer {
+  background-color: #2a2a2a;
+  color: #ededed;
+  bottom: 0;
+}
+
+.Create-footer {
+  padding: 15px 0 90px 24px;
+}

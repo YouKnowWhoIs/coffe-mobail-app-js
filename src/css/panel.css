@@ -1,0 +1,37 @@
+.panel-conteiner {
+  display: flex;
+  justify-content: center;
+}
+.panel {
+  background-color: #ededed;
+  display: flex;
+  gap: 61px;
+  height: 41px;
+  padding: 24px 55.5px 17px 55px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  position: fixed;
+  bottom: 0;
+  z-index: 5;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.active-icon {
+  fill: #c67c4e;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 6px;
+}
+.active-icon::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 28%;
+  background-color: #c67c4e;
+  width: 10px;
+  height: 5px;
+  border-radius: 18px;
+}

@@ -1,0 +1,92 @@
+.coffees-list {
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 327px;
+}
+
+.coffee-card {
+  width: 156x;
+  background-color: #ededed;
+  border-radius: 12px;
+  list-style: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.rating {
+  position: absolute;
+  padding: 16px 0 0 105px;
+  display: flex;
+}
+
+.icon-rating {
+  width: 12px;
+  height: 12px;
+  fill: #fbbe21;
+  margin-right: 8px;
+}
+
+.rating-text {
+  color: #fff;
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 150%;
+}
+
+.conteiner-card-img {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+}
+
+.card-img {
+  width: 140px;
+  height: 128px;
+  border-radius: 12px;
+}
+
+.conteiner-card-text {
+  padding: 0 8px 0 8px;
+}
+
+.card-name {
+  line-height: 150%;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card-type {
+  color: #a2a2a2;
+  line-height: 120%;
+  font-size: 12px;
+  padding: 4px 0 0;
+  margin: 0 0 10.5px 0;
+}
+
+.card-price {
+  font-weight: 700;
+  line-height: 150%;
+  font-size: 18px;
+  margin: 0 0 14.5px 0;
+  float: left;
+}
+
+.card-button {
+  float: right;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.icon-plus {
+  background-color: #c67c4e;
+  border-radius: 8px;
+  width: 10px;
+  height: 10px;
+  fill: #fff;
+  padding: 10px;
+}
