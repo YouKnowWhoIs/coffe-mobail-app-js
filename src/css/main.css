@@ -40,6 +40,9 @@ label:has(input[type='radio']:checked) {
   text-align: center;
   cursor: pointer;
 }
+.active-coffee-optional:hover {
+  background-color: #c67c4e;
+}
 
 .cursor {
   cursor: pointer;

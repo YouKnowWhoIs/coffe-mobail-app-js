@@ -9,11 +9,12 @@
       href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css">
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Home Page</title>
+    <title>Coffees Order</title>
   </head>
   <body>
-<header class="header">
+    <header class="header">
       <div class="conteiner-location">
         <span class="location-title">Location</span>
         <form>
@@ -43,7 +44,7 @@
     </header>
     <main class="main">
       <div class="select-coffee">
-        <span class="active-coffee-optional">
+        <span class="coffee-optional active-coffee-optional">
           <input
             class="input-decoration"
             type="radio"
@@ -176,10 +177,9 @@
       </div>
     </div>
 
-    <div class="modal-order-coffee"></div>
+    <div class="modal-detail-coffee"></div>
 
-
-    <script type="module" src="./js/coffeeList.js"></script>
-    <script src="./js/modalWelkome.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>

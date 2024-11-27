@@ -6,12 +6,12 @@ function truncatName(name) {
   return name.length > 14 ? name.slice(0, 12) + '...' : name;
 }
 
-function renderCoffeeList() {
+export async function renderCoffeeList() {
   coffeeList.innerHTML = '';
 
-  coffees.forEach(coffee => {
+  await coffees.forEach(coffee => {
     coffeeList.innerHTML += `
-    <li class="coffee-card">
+    <li id="${coffee.id}" class="coffee-card">
       <span class="rating">
         <svg class="icon-rating">
           <use href="../../public/icon/symbol-defs.svg#icon-star1"/>
@@ -29,7 +29,7 @@ function renderCoffeeList() {
         <span class="card-name">${truncatName(coffee.name)}</span>
           <p class="card-type">${coffee.type}</p>
         <span class="card-price">$ ${coffee.price}</span>
-        <button class="card-button" type="button">
+        <button class="card-button">
           <svg class="icon-plus">
             <use href="../../public/icon/symbol-defs.svg#icon-plus"/>
           </svg>

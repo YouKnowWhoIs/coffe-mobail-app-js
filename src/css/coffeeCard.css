@@ -13,6 +13,7 @@
   border-radius: 12px;
   list-style: none;
   position: relative;
+  cursor: pointer;
 }
 
 .rating {

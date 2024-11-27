@@ -1,0 +1,204 @@
+.modal-detail-coffee {
+  background-color: #fff;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  z-index: 20;
+}
+.modal-detail-coffee.open {
+  display: flex;
+}
+
+.detail-container {
+  background: #fff;
+  max-width: 500px;
+  width: 327px;
+  padding: 0 24px;
+}
+
+.detail-header {
+  padding: 24px 0;
+  display: flex;
+}
+
+.icon-back {
+  width: 24px;
+  height: 24px;
+  margin: 10px 105px 10px 10px;
+  cursor: pointer;
+}
+
+.details {
+  font-weight: 600;
+  line-height: 120%;
+  font-size: 16px;
+  padding: 12.5px 0;
+}
+
+.icon-not-like {
+  width: 24px;
+  height: 24px;
+  padding: 10px 10px 10px 105px;
+}
+
+.img-details {
+  width: 327px;
+  height: 202px;
+  border-radius: 16px;
+  margin: 0 0 16px 0;
+}
+
+.details-text-top {
+  border: 1px solid #dadada;
+  width: 295px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin: 16px 14px;
+}
+
+.coffee-name {
+  line-height: 150%;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0 0 34px 0;
+}
+
+.details-rating-conteiner {
+  display: flex;
+}
+
+.details-rating {
+  width: 20px;
+  height: 20px;
+  fill: #fbbe21;
+  padding-right: 4px;
+}
+
+.details-description {
+  margin-bottom: 24px;
+}
+
+.details-coffee-raiting {
+  line-height: 150%;
+  font-size: 16px;
+  font-weight: 600;
+  padding-right: 4px;
+}
+
+.details-coments {
+  color: #a2a2a2;
+  font-size: 12px;
+  line-height: 210%;
+  margin: 0;
+}
+
+.text-name-des {
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 600;
+  padding-bottom: 8px;
+  margin: 0;
+}
+
+.details-size {
+  margin-bottom: 24px;
+}
+
+.text-name-size {
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 600;
+  padding-bottom: 16px;
+  margin: 0;
+}
+
+.details-button-conteiner {
+  display: flex;
+  gap: 16px;
+}
+
+.detail-size-button {
+  border: 2px solid #dadada;
+  border-radius: 12px;
+  padding: 10px 42px;
+  background-color: #ededed;
+  cursor: pointer;
+}
+.detail-size-button:hover {
+  border-color: #c67c4e;
+  color: #c67c4e;
+  background-color: #f9f2ed;
+}
+label:has(input[type='radio']:checked) {
+  border-color: #111;
+}
+
+.detail-size-button-active {
+  border: 2px solid #c67c4e;
+  border-radius: 12px;
+  padding: 10px 42px;
+  cursor: pointer;
+  color: #c67c4e;
+  background-color: #f9f2ed;
+}
+
+.size-button {
+  display: none;
+}
+
+.details-panel {
+  width: 375px;
+  margin-left: -24px;
+  background-color: #ededed;
+  position: absolute;
+  bottom: 0;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.details-price {
+  display: flex;
+  flex-direction: column;
+  float: left;
+  padding: 20px 34px 16px 24px;
+}
+
+.text-price {
+  line-height: 120%;
+  font-size: 14px;
+  color: #a2a2a2;
+  padding: 0 0 8px 0;
+}
+
+.price {
+  font-weight: 600;
+  line-height: 150%;
+  font-size: 18px;
+  color: #c67c4e;
+}
+
+.button-conteiner {
+  padding: 16px 24px 12px 0;
+  float: right;
+}
+
+.details-button {
+  background-color: #c67c4e;
+  color: #fff;
+  padding: 16px 72px;
+  border: none;
+  border-radius: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+.details-button:hover {
+  background-color: #a66d49;
+}

@@ -1,9 +1,10 @@
 @import url('./header.css');
 @import url('./main.css');
 @import url('./footer.css');
-@import url('./menu.css');
+@import url('./panel.css');
 @import url('./modalWelcome.css');
 @import url('./coffeeCard.css');
+@import url('./detailCoffee.css');
 
 body {
   margin: 0;

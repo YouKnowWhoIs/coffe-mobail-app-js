@@ -22,8 +22,8 @@
 
 .location-form {
   color: #fff;
-  background-color: inherit;
-  border: none;
+  background-color: #2a2a2a;
+  border: 1px solid #2a2a2a;
 }
 
 .seting-conteiner {
