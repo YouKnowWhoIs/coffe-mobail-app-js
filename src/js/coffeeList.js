@@ -1,15 +1,13 @@
-import coffees from './index.js';
-
 const coffeeList = document.querySelector('.coffees-list');
 
 function truncatName(name) {
   return name.length > 14 ? name.slice(0, 12) + '...' : name;
 }
 
-export async function renderCoffeeList() {
+async function renderCoffeeList(dataCoffeesType) {
   coffeeList.innerHTML = '';
 
-  await coffees.forEach(coffee => {
+  await dataCoffeesType.map(coffee => {
     coffeeList.innerHTML += `
     <li id="${coffee.id}" class="coffee-card">
       <span class="rating">
@@ -39,4 +37,4 @@ export async function renderCoffeeList() {
   });
 }
 
-renderCoffeeList();
+export default renderCoffeeList;

@@ -1,8 +1,10 @@
 import coffees from './index.js';
+import addBasket from './addBasket.js';
+import { sizeSelected } from './sizeSelected.js';
+import { favoriteCoffee } from './favoriteCoffee.js';
 
 const coffeeList = document.querySelector('.coffees-list');
 const modal = document.querySelector('.modal-detail-coffee');
-const test = document.querySelector('.test');
 
 coffeeList.addEventListener('click', event => {
   const card = event.target.closest('.coffee-card');
@@ -14,7 +16,7 @@ coffeeList.addEventListener('click', event => {
       modal.classList.add('open');
 
       modal.innerHTML = `
-      <div class="detail-container">
+      <div id=${coffee.id} class="detail-container">
         <div class="detail-header">
           <span class="close-button">
             <svg class="icon-back">
@@ -29,6 +31,7 @@ coffeeList.addEventListener('click', event => {
         <div>
           <img class="img-details" src="${coffee.url}" alt="${coffee.name}"/>
           <h4 class="coffee-name">${coffee.name}</h4>
+          <p class="details-type">${coffee.type}</p>
           <div class="details-rating-conteiner">
             <svg class="details-rating">
               <use href="../../public/icon/symbol-defs.svg#icon-star1"/>
@@ -44,12 +47,12 @@ coffeeList.addEventListener('click', event => {
         <div class="details-size">
           <h5 class="text-name-size">Size</h5>
           <div class="details-button-conteiner">
-            <span class="detail-size-button">
+            <span class="detail-size-button detail-size-button-active">
               <input class="input-decoration" type="radio" name="size" value="S">
               <label class="details-button-text" for="S">S</label>
             </span>
-            <span class="detail-size-button detail-size-button-active">
-              <input class="input-decoration" type="radio" name="size" value="M" checked>
+            <span class="detail-size-button">
+              <input class="input-decoration" type="radio" name="size" value="M">
               <label class="details-button-text" for="M">M</label>
             </span>
             <span class="detail-size-button">
@@ -62,10 +65,10 @@ coffeeList.addEventListener('click', event => {
         <div class="details-panel">
           <div class="details-price">
             <span class="text-price">Price</span>
-            <div class="price"> $${coffee.price}</div>
+            <div class="price-text"> $${coffee.price}</div>
           </div>
           <div class="button-conteiner">
-          <button class="details-button" type="submit">Buy Now</button>
+          <button class="details-button" type="submit">Order</button>
           </div>
         </div>
       </div>`;
@@ -77,17 +80,11 @@ coffeeList.addEventListener('click', event => {
         modal.innerHTML = '';
       });
 
-      const test = document.querySelectorAll('.detail-size-button');
+      sizeSelected(coffee);
 
-      test.forEach(select => {
-        select.addEventListener('click', () => {
-          test.forEach(active => {
-            active.classList.remove('detail-size-button-active');
-          });
+      favoriteCoffee();
 
-          select.classList.add('detail-size-button-active');
-        });
-      });
+      addBasket();
     }
   }
 });

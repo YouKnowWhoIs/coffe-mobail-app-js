@@ -1,38 +1,39 @@
-const buttons = document.querySelector('.coffees-list');
+function AddBacket() {
+  const button = document.querySelector('.button-conteiner');
 
-buttons.addEventListener('click', event => {
-  const button = event.target.closest('.card-button');
+  button.addEventListener('click', () => {
+    const conteiner = document.querySelector('.detail-container');
+    const size = document.querySelector('.detail-size-button-active');
 
-  if (button) {
-    const coffeeCard = button.closest('.coffee-card');
+    const coffeeData = {
+      id: conteiner.id,
+      name: conteiner.querySelector('.coffee-name').textContent,
+      type: conteiner.querySelector('.details-type').textContent,
+      size: size.textContent.trim(),
+      price: conteiner.querySelector('.price-text').textContent,
+      rating: conteiner.querySelector('.details-coffee-raiting').textContent,
+      url: conteiner.querySelector('.img-details').src,
+    };
 
-    if (coffeeCard && coffeeCard.id) {
-      const coffeeData = {
-        id: coffeeCard.id,
-        name: coffeeCard.querySelector('.card-name').textContent,
-        price: coffeeCard.querySelector('.card-price').textContent,
-        rating: coffeeCard.querySelector('.rating-text').textContent,
-      };
-      console.log(coffeeData);
+    try {
+      const addCoffeeData =
+        JSON.parse(localStorage.getItem('coffeeData')) || [];
 
-      try {
-        const addCoffeeData =
-          JSON.parse(localStorage.getItem('coffeeData')) || [];
+      addCoffeeData.push(coffeeData);
 
-        addCoffeeData.push(coffeeData);
+      localStorage.setItem('coffeeData', JSON.stringify(addCoffeeData));
 
-        localStorage.setItem('coffeeData', JSON.stringify(addCoffeeData));
-
-        iziToast.success({
-          position: 'topRight',
-          message: 'Coffee has been added to the basket',
-        });
-      } catch (error) {
-        iziToast.error({
-          position: 'topRight',
-          message: 'Something went wrong',
-        });
-      }
+      iziToast.success({
+        position: 'topRight',
+        message: 'Coffee has been added to the basket',
+      });
+    } catch (error) {
+      iziToast.error({
+        position: 'topRight',
+        message: 'Something went wrong',
+      });
     }
-  }
-});
+  });
+}
+
+export default AddBacket;
