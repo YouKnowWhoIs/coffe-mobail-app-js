@@ -20,7 +20,7 @@ function basketModal() {
         </div>
         <div class="delivery-select">
             <button class="deliver-button delivery-select-active" type="button">Deliver</button>
-            <button class="deliver-button" type="button">Pick Up</button>
+            <button class="pick-up-button" type="button">Pick Up</button>
         </div>
         <div class="detail-address">
             <h4>Delivery Address</h4>
@@ -79,17 +79,6 @@ function basketModal() {
     closeButton.addEventListener('click', () => {
       modalBasket.classList.remove('open');
       modalBasket.innerHTML = '';
-    });
-
-    const selectButton = document.querySelectorAll('.deliver-button');
-
-    selectButton.forEach(select => {
-      select.addEventListener('click', () => {
-        selectButton.forEach(active => {
-          active.classList.remove('delivery-select-active');
-        });
-        select.classList.add('delivery-select-active');
-      });
     });
   });
 }

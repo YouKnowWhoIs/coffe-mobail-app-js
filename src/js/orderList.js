@@ -79,7 +79,7 @@ export function orderCoffee() {
         coffee => coffee.id === id && coffee.size === size
       );
 
-      if (indexToRemove !== 1) {
+      if (indexToRemove !== -1) {
         coffeeData.splice(indexToRemove, 1);
       }
 
