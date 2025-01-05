@@ -1,0 +1,46 @@
+.order-card-coffee {
+  display: flex;
+  justify-items: center;
+}
+
+.order-card-coffee:not(:last-child) {
+  padding-bottom: 16px;
+}
+
+.order-img {
+  width: 54px;
+  height: 54px;
+  border-radius: 8px;
+  margin-right: 16px;
+  float: left;
+}
+
+.order-info-card {
+  padding: 6px 0;
+}
+
+.order-info-card p,
+.order-size-inf {
+  padding-top: 4px;
+  line-height: 120%;
+  font-size: 12px;
+  color: #a2a2a2;
+}
+
+.number-order-coffee {
+  margin: 15px 0 15px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.icons-order {
+  border: 1px solid #ededed;
+  border-radius: 100%;
+  padding: 4px;
+  width: 12px;
+  height: 12px;
+}
+
+.order-number {
+  padding: 0 18px;
+}

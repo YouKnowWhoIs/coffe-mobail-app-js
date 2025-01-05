@@ -5,8 +5,26 @@
 @import url('./modalWelcome.css');
 @import url('./coffeeCard.css');
 @import url('./detailCoffee.css');
+@import url('./basketModal.css');
+@import url('./orderCoffeeCard.css');
 
 body {
   margin: 0;
   font-family: Sora, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
 }
