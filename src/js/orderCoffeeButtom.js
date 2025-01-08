@@ -17,6 +17,8 @@ export function orderCoffeeButtom() {
       localStorage.setItem('orderCoffee', JSON.stringify(orderCoffee));
 
       localStorage.removeItem('coffeeData');
+
+      console.log('Coffee order completed!');
     } catch (error) {
       console.log(error);
       return;
