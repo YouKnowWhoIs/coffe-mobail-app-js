@@ -18,6 +18,7 @@
   max-width: 500px;
   width: 327px;
   padding: 0 24px;
+  overflow-y: auto;
 }
 
 .detail-header {
@@ -111,6 +112,7 @@
 
 .details-size {
   margin-bottom: 24px;
+  padding-bottom: 80px;
 }
 
 .text-name-size {

@@ -14,6 +14,7 @@ coffeeList.addEventListener('click', event => {
 
     if (coffee) {
       modal.classList.add('open');
+      document.body.classList.add('no-scroll');
 
       modal.innerHTML = `
       <div id=${coffee.id} class="detail-container">
@@ -77,6 +78,7 @@ coffeeList.addEventListener('click', event => {
 
       closeButton.addEventListener('click', () => {
         modal.classList.remove('open');
+        document.body.classList.remove('no-scroll');
         modal.innerHTML = '';
       });
 

@@ -1,5 +1,6 @@
 import { orderCoffee } from './orderList.js';
 import { updatePrice } from './updatePrice.js';
+import { orderCoffeeButtom } from './orderCoffeeButtom.js';
 
 function basketModal() {
   const basketButton = document.querySelector('.icon-basket');
@@ -7,6 +8,7 @@ function basketModal() {
 
   basketButton.addEventListener('click', () => {
     modalBasket.classList.add('open');
+    document.body.classList.add('no-scroll');
 
     modalBasket.innerHTML = `
     <div class="modal-basket-conteiner">
@@ -74,10 +76,13 @@ function basketModal() {
 
     updatePrice();
 
+    orderCoffeeButtom();
+
     const closeButton = document.querySelector('.close-button');
 
     closeButton.addEventListener('click', () => {
       modalBasket.classList.remove('open');
+      document.body.classList.remove('no-scroll');
       modalBasket.innerHTML = '';
     });
   });

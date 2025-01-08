@@ -32,7 +32,7 @@ export function updatePrice() {
     }
   };
 
-  const updateDeliveryInfo = (isDeliverySelected, allcoffeePrice) => {
+  const updateInfo = (isDeliverySelected, allcoffeePrice) => {
     const deliveryPrice = coffeeData.length;
     const deliveryTotalPrice =
       deliveryPrice > 1 ? deliveryPrice - 1 : deliveryPrice;
@@ -86,17 +86,17 @@ export function updatePrice() {
       selectPickUpButton.classList.remove('delivery-select-active');
       selectDeliveryButton.classList.add('delivery-select-active');
       deliveryElement.classList.remove('pick-up-select');
-      updateDeliveryInfo(true, allcoffeePricePromo);
+      updateInfo(true, allcoffeePricePromo);
     });
 
     selectPickUpButton.addEventListener('click', () => {
       selectDeliveryButton.classList.remove('delivery-select-active');
       selectPickUpButton.classList.add('delivery-select-active');
       deliveryElement.classList.add('pick-up-select');
-      updateDeliveryInfo(false, allcoffeePricePromo);
+      updateInfo(false, allcoffeePricePromo);
     });
 
-    updateDeliveryInfo(true, allcoffeePricePromo);
+    updateInfo(true, allcoffeePricePromo);
   } else {
     updateElementText(allCoffeePriceElement, `$0.00`);
     updateElementText(deliveryPriceElement, `$0.00`);
