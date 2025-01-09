@@ -1,0 +1,26 @@
+.delivery-card {
+  padding-bottom: 36px;
+}
+
+.coffee-delivery-img {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  float: left;
+}
+
+.text-name {
+  justify-content: center;
+  float: left;
+  display: flex;
+  padding: 0 5px 25px 16px;
+}
+
+.text-number {
+  color: #a2a2a2;
+}
+
+.prise-delivery-coffee {
+  float: right;
+  padding-top: 40px;
+}
