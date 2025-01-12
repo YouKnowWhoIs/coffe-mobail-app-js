@@ -54,6 +54,12 @@ export function updatePrice() {
       ? allcoffeePrice + deliveryTotalPrice
       : allcoffeePrice;
 
+    parseFloat(localStorage.getItem('currentPrice')) || 0;
+
+    localStorage.setItem('currentPrice', totalPrice.toString());
+
+    parseFloat(localStorage.getItem('currentPrice')) || 0;
+
     updateElementText(totalPriceElement, `$${totalPrice.toFixed(2)}`);
   };
 
