@@ -22,7 +22,7 @@ function filterType() {
         }
         renderCoffeeList(dataCoffeesType);
       } else {
-        console.warn('Елемент не знайдено!');
+        console.warn('Element not found!');
       }
     }
   });

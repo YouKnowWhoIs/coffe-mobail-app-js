@@ -1,3 +1,5 @@
+import { coffeeList } from './coffeeList.js';
+
 function toggleFavorite(itemId) {
   const conteiner = document.querySelector('.detail-container');
   const favorite = document.querySelector('.icon-not-like');
@@ -5,8 +7,6 @@ function toggleFavorite(itemId) {
   const coffeeFavoriteData = {
     id: conteiner.id,
     name: conteiner.querySelector('.coffee-name').textContent,
-    price: conteiner.querySelector('.price-text').textContent,
-    rating: conteiner.querySelector('.details-coffee-raiting').textContent,
   };
 
   let addCoffeeFavorite =
@@ -17,18 +17,24 @@ function toggleFavorite(itemId) {
       coffee => coffee.id !== itemId
     );
 
-    localStorage.setItem('favoriteCoffees', JSON.stringify(addCoffeeFavorite));
+    if (addCoffeeFavorite.length === 0) {
+      localStorage.removeItem('favoriteCoffees');
+    } else {
+      localStorage.setItem(
+        'favoriteCoffees',
+        JSON.stringify(addCoffeeFavorite)
+      );
+    }
 
     favorite.innerHTML =
       '<use href="../../public/icon/symbol-defs.svg#icon-heart1"/>';
 
     iziToast.success({
       position: 'topRight',
-      message: 'Coffee has been delete in favorites',
+      message: 'Coffee has been deleted from favorites',
     });
   } else {
     addCoffeeFavorite.push(coffeeFavoriteData);
-
     localStorage.setItem('favoriteCoffees', JSON.stringify(addCoffeeFavorite));
 
     favorite.innerHTML =
@@ -39,15 +45,17 @@ function toggleFavorite(itemId) {
       message: 'Coffee has been selected in favorites',
     });
   }
+
+  coffeeList();
 }
 
-export async function favoriteCoffee() {
+export function favoriteCoffee() {
   const favorite = document.querySelector('.icon-not-like');
   const conteiner = document.querySelector('.detail-container');
 
   const itemId = conteiner.id;
 
-  const addCoffeeFavorite =
+  let addCoffeeFavorite =
     JSON.parse(localStorage.getItem('favoriteCoffees')) || [];
 
   if (addCoffeeFavorite.some(coffee => coffee.id === itemId)) {
@@ -58,7 +66,7 @@ export async function favoriteCoffee() {
       '<use href="../../public/icon/symbol-defs.svg#icon-heart1"/>';
   }
 
-  await favorite.addEventListener('click', () => {
+  favorite.addEventListener('click', () => {
     toggleFavorite(itemId);
   });
 }

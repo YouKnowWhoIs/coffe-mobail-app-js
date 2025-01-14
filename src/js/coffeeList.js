@@ -1,40 +1,42 @@
-const coffeeList = document.querySelector('.coffees-list');
+import coffees from './index.js';
+import { renderCoffeeList } from './renderCoffeeList.js';
 
-function truncatName(name) {
-  return name.length > 14 ? name.slice(0, 12) + '...' : name;
-}
+export function coffeeList() {
+  const coffeeList = document.querySelector('.coffees-list');
+  const iconFavorite = document.querySelector('.icon-heart');
+  const iconHome = document.querySelector('.icon-home');
 
-async function renderCoffeeList(dataCoffeesType) {
-  coffeeList.innerHTML = '';
+  if (iconHome.classList.contains('active-icon')) {
+    renderCoffeeList(coffees);
+  }
 
-  await dataCoffeesType.map(coffee => {
-    coffeeList.innerHTML += `
-    <li id="${coffee.id}" class="coffee-card">
-      <span class="rating">
-        <svg class="icon-rating">
-          <use href="../../public/icon/symbol-defs.svg#icon-star1"/>
-        </svg>
-        <span class="rating-text">
-        ${coffee.rating}
-        </span>
-      </span>
+  iconHome.addEventListener('click', () => {
+    iconHome.classList.add('active-icon');
+    iconFavorite.classList.remove('active-icon');
 
-      <div class="conteiner-card-img">
-        <img class="card-img" src="${coffee.url}"/>
-      </div>
+    renderCoffeeList(coffees);
+  });
 
-      <div class="conteiner-card-text">
-        <span class="card-name">${truncatName(coffee.name)}</span>
-          <p class="card-type">${coffee.type}</p>
-        <span class="card-price">$ ${coffee.price}</span>
-        <button class="card-button">
-          <svg class="icon-plus">
-            <use href="../../public/icon/symbol-defs.svg#icon-plus"/>
-          </svg>
-        </button>
-      </div>
-    </li>`;
+  iconFavorite.addEventListener('click', () => {
+    const coffeeFavorite =
+      JSON.parse(localStorage.getItem('favoriteCoffees')) || [];
+    iconFavorite.classList.add('active-icon');
+    iconHome.classList.remove('active-icon');
+
+    if (coffeeFavorite.length > 0) {
+      const favoriteId = coffeeFavorite.map(item => String(item.id));
+
+      const selectedCoffees = coffees.filter(coffee =>
+        favoriteId.includes(String(coffee.id))
+      );
+
+      renderCoffeeList(selectedCoffees);
+    } else {
+      coffeeList.innerHTML = `
+            <p class="not-favorite-text">You don't have favorite coffee!</p>
+          `;
+    }
   });
 }
 
-export default renderCoffeeList;
+coffeeList();
