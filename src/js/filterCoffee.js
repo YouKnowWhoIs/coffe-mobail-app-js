@@ -1,9 +1,10 @@
 import coffees from './index.js';
-import renderCoffeeList from './coffeeList.js';
-
-const selectCoffeeType = document.querySelector('.select-coffee');
+import { renderCoffeeList } from './renderCoffeeList.js';
 
 function filterType() {
+  const selectCoffeeType = document.querySelector('.select-coffee');
+  const coffeeList = document.querySelector('.coffees-list');
+
   selectCoffeeType.addEventListener('click', event => {
     const selectType = event.target.closest('.coffee-optional');
 
@@ -22,15 +23,12 @@ function filterType() {
         }
         renderCoffeeList(dataCoffeesType);
       } else {
-        console.warn('Element not found!');
+        coffeeList.innerHTML = `
+            <p>Something went wrong, please restart the site</p>
+          `;
       }
     }
   });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  renderCoffeeList(coffees);
-  filterType();
-});
-
-filterType();
+export default filterType();

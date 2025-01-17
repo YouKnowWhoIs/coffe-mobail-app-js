@@ -43,7 +43,7 @@
 .icon-not-like {
   width: 24px;
   height: 24px;
-  padding: 10px 10px 10px 105px;
+  margin: 10px 10px 10px auto;
 }
 
 .img-details {

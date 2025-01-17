@@ -5,12 +5,15 @@ export function coffeeList() {
   const coffeeList = document.querySelector('.coffees-list');
   const iconFavorite = document.querySelector('.icon-heart');
   const iconHome = document.querySelector('.icon-home');
+  const selectCoffeeType = document.querySelector('.select-coffee');
 
   if (iconHome.classList.contains('active-icon')) {
     renderCoffeeList(coffees);
   }
 
   iconHome.addEventListener('click', () => {
+    selectCoffeeType.style.visibility = '';
+
     iconHome.classList.add('active-icon');
     iconFavorite.classList.remove('active-icon');
 
@@ -20,6 +23,9 @@ export function coffeeList() {
   iconFavorite.addEventListener('click', () => {
     const coffeeFavorite =
       JSON.parse(localStorage.getItem('favoriteCoffees')) || [];
+
+    selectCoffeeType.style.visibility = 'hidden';
+
     iconFavorite.classList.add('active-icon');
     iconHome.classList.remove('active-icon');
 
