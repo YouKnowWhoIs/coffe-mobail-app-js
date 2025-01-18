@@ -34,8 +34,11 @@ export function updatePrice() {
 
   const updateInfo = (isDeliverySelected, allcoffeePrice) => {
     const deliveryPrice = coffeeData.length;
-    const deliveryTotalPrice =
-      deliveryPrice > 1 ? deliveryPrice - 1 : deliveryPrice;
+    const deliveryTotalPrice = isDeliverySelected
+      ? deliveryPrice > 1
+        ? deliveryPrice - 1
+        : deliveryPrice
+      : 0;
 
     if (isDeliverySelected) {
       if (deliveryPrice > 1) {
@@ -102,7 +105,14 @@ export function updatePrice() {
       updateInfo(false, allcoffeePricePromo);
     });
 
-    updateInfo(true, allcoffeePricePromo);
+    if (
+      coffeeData.length > 0 &&
+      selectDeliveryButton.classList.contains('delivery-select-active')
+    ) {
+      updateInfo(true, allcoffeePricePromo);
+    } else {
+      updateInfo(false, allcoffeePricePromo);
+    }
   } else {
     updateElementText(allCoffeePriceElement, `$0.00`);
     updateElementText(deliveryPriceElement, `$0.00`);

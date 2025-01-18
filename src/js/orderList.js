@@ -50,6 +50,8 @@ export function orderCoffee() {
       const id = orderCard.dataset.id;
       const size = orderCard.dataset.size;
 
+      const isDeliberySelect = true;
+
       const coffeeData = JSON.parse(localStorage.getItem('coffeeData')) || [];
       const newCoffeeData = [
         ...coffeeData,
@@ -61,7 +63,7 @@ export function orderCoffee() {
       const orderNumber = orderCard.querySelector('.order-number');
       orderNumber.textContent = parseInt(orderNumber.textContent) + 1;
 
-      updatePrice();
+      updatePrice(isDeliberySelect);
     });
   });
 
