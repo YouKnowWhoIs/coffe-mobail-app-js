@@ -13,7 +13,14 @@
   justify-content: center;
   float: left;
   display: flex;
-  padding: 0 5px 25px 16px;
+  padding: 0 5px 15px 16px;
+}
+
+.text-delivery-location {
+  justify-content: center;
+  float: left;
+  display: flex;
+  padding: 0 5px 0 16px;
 }
 
 .text-number {
@@ -22,5 +29,4 @@
 
 .prise-delivery-coffee {
   float: right;
-  padding-top: 40px;
 }

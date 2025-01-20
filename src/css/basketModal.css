@@ -89,8 +89,7 @@
   padding-top: 16px;
 }
 
-.button-edit,
-.button-note {
+.button-edit {
   border: solid 1px #a2a2a2;
   border-radius: 16px;
   padding: 6px 12px;
@@ -196,4 +195,11 @@
   color: #d5d5d5;
   background-color: #8a5432;
   cursor: not-allowed;
+}
+
+.city-dropdown {
+  margin: 0 10px;
+  padding: 0 5px;
+  border: 1px solid #a2a2a2;
+  border-radius: 6px;
 }

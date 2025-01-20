@@ -7,3 +7,4 @@ import './js/filterCoffee.js';
 import './js/basketModal.js';
 import './js/deliveryModal.js';
 import './js/searcCoffeeName.js';
+import './js/location.js';

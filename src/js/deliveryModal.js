@@ -21,7 +21,6 @@ function deliveryModal() {
 
         <div class="delivery-text">
             <h3>Thanks for order</h3>
-            <p>Delivery to: location</p>
         </div>
 
         <div class="delivered-conteiner">

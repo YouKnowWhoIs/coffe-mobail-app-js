@@ -1,6 +1,7 @@
 import { orderCoffee } from './orderList.js';
 import { updatePrice } from './updatePrice.js';
 import { orderCoffeeButtom } from './orderCoffeeButtom.js';
+import { orderLocation } from './orderLocation.js';
 
 function basketModal() {
   const basketButton = document.querySelector('.icon-basket');
@@ -27,8 +28,7 @@ function basketModal() {
         <div class="detail-address">
             <h4>Delivery Address</h4>
             <span>
-                <h5>Jl. Kpg Sutoyo</h5>
-                <p>aaa</p>
+                <h5 class="order-adress"></h5>
             </span>
             <span class="button-adres-conteiner">
                 <button class="button-edit">
@@ -36,12 +36,6 @@ function basketModal() {
                         <use  href="../public/icon/symbol-defs.svg#icon-edit"/>
                     </svg>
                 Edit Addres
-                </button>
-                <button class="button-note">
-                    <svg class="icons-edit">
-                        <use  href="../public/icon/symbol-defs.svg#icon-note"/>
-                    </svg>
-                Add Note
                 </button>
             </span>
         </div>
@@ -71,6 +65,8 @@ function basketModal() {
         </div>
     </div>
       `;
+
+    orderLocation();
 
     orderCoffee();
 
