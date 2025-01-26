@@ -1,5 +1,8 @@
-.delivery-card {
+.delivery-list {
   padding-bottom: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .coffee-delivery-img {

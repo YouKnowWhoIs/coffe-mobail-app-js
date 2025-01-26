@@ -11,7 +11,6 @@ function AddBacket() {
       type: conteiner.querySelector('.details-type').textContent,
       size: size.textContent.trim(),
       price: conteiner.querySelector('.price-text').textContent,
-      rating: conteiner.querySelector('.details-coffee-raiting').textContent,
       url: conteiner.querySelector('.img-details').src,
     };
 

@@ -1,6 +1,5 @@
 export function orderCoffeeButtom() {
   const coffeeData = JSON.parse(localStorage.getItem('coffeeData')) || [];
-  const dataLocation = JSON.parse(localStorage.getItem('dataLocation'));
 
   const orderButtom = document.querySelector('.order-button');
 
@@ -11,22 +10,26 @@ export function orderCoffeeButtom() {
 
   orderButtom.addEventListener('click', () => {
     try {
+      const coffeeData = JSON.parse(localStorage.getItem('coffeeData')) || [];
       const orderCoffee = JSON.parse(
         localStorage.getItem('orderCoffee') || '[]'
       );
       const currentPrice =
         parseFloat(localStorage.getItem('currentPrice')) || 0;
-      const dataPrice = parseFloat(localStorage.getItem('dataPrice')) || 0;
+      const dataLocation =
+        JSON.parse(localStorage.getItem('dataLocation')) || '';
 
-      JSON.parse(localStorage.getItem('orderLocation')) || [];
+      const orders = {
+        coffee: coffeeData,
+        location: dataLocation,
+        price: currentPrice,
+      };
 
-      const newTotalPrice = dataPrice + currentPrice;
-
-      orderCoffee.push(...coffeeData);
-
-      localStorage.setItem('orderCoffee', JSON.stringify(orderCoffee));
-      localStorage.setItem('dataPrice', JSON.stringify(newTotalPrice));
-      localStorage.setItem('orderLocation', JSON.stringify(dataLocation));
+      const previousOrders = JSON.parse(localStorage.getItem('orders')) || [];
+      localStorage.setItem(
+        'orders',
+        JSON.stringify([...previousOrders, orders])
+      );
 
       localStorage.removeItem('coffeeData');
       localStorage.removeItem('currentPrice');

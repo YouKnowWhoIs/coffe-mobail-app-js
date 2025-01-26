@@ -1,27 +1,28 @@
 export function deliveryCard() {
   const deliveryList = document.querySelector('.delivery-list');
-  const orderCoffee = JSON.parse(localStorage.getItem('orderCoffee')) || [];
-  const orderLocation = JSON.parse(localStorage.getItem('orderLocation')) || [];
+  const previousOrders = JSON.parse(localStorage.getItem('orders')) || [];
 
-  const dataPrice = parseFloat(localStorage.getItem('dataPrice')) || 0;
-
-  const orderCoffeeLength = orderCoffee.length;
-
-  if (orderCoffeeLength === 0) {
+  if (previousOrders.length === 0) {
     deliveryList.innerHTML += `<p>No coffee order yet!</p>`;
     return;
   }
 
-  const allOrdercoffeePrice = JSON.parse(dataPrice);
+  deliveryList.innerHTML = '';
 
-  const coffeeImg = orderCoffee[0].url;
+  previousOrders.forEach(coffee => {
+    const coffeeImg = coffee.coffee[0].url;
+    const coffeeLength = coffee.coffee.length;
+    const location = coffee.location;
+    const coffeeprice = coffee.price;
 
-  deliveryList.innerHTML = `
-        <div class="delivery-card">
+    deliveryList.innerHTML += `
+      <div>
         <img class="coffee-delivery-img" alt="coffee" src="${coffeeImg}"/>
-            <span class="text-name">Coffee delivery:</span> <span class="text-number">(${orderCoffeeLength})</span>
-            <span class="text-delivery-location">Delivery to: ${orderLocation}</span>
-            <span class="prise-delivery-coffee">$${allOrdercoffeePrice}</span>
-        <div>
+        <span class="text-name">Coffee delivery:</span>
+        <span class="text-number">(${coffeeLength})</span>
+        <span class="text-delivery-location">Delivery to: ${location}</span>
+        <span class="prise-delivery-coffee">$${coffeeprice}</span>
+      </div>
     `;
+  });
 }

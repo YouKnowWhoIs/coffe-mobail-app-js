@@ -42,7 +42,6 @@
   content: '';
   border: solid 1px #ededed;
   width: 295px;
-  margin: 16px;
   display: flex;
   justify-content: center;
 }
@@ -50,7 +49,7 @@
 .delivery-list::after {
   content: '';
   border: solid 3px #ededed;
-  margin: 16px -24px;
+  margin: 0 -24px;
   display: flex;
   justify-content: center;
 }

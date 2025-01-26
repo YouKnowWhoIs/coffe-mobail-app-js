@@ -59,7 +59,7 @@ export function updatePrice() {
 
     parseFloat(localStorage.getItem('currentPrice')) || 0;
 
-    localStorage.setItem('currentPrice', totalPrice.toString());
+    localStorage.setItem('currentPrice', totalPrice.toFixed(2));
 
     parseFloat(localStorage.getItem('currentPrice')) || 0;
 
