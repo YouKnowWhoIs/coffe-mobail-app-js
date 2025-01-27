@@ -1,6 +1,6 @@
 import { deliveryCard } from './deliveryCard.js';
 
-function deliveryModal() {
+function modalDelivery() {
   const buttonBell = document.querySelector('.icon-bell');
   const modal = document.querySelector('.modal-delivery');
 
@@ -65,4 +65,4 @@ function deliveryModal() {
   });
 }
 
-export default deliveryModal();
+export default modalDelivery();

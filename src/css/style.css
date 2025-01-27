@@ -1,14 +1,14 @@
+@import url('./coffeeList.css');
+@import url('./deliveryCard.css');
+@import url('./footer.css');
 @import url('./header.css');
 @import url('./main.css');
-@import url('./footer.css');
-@import url('./panel.css');
+@import url('./modalBasket.css');
+@import url('./modalDelivery.css');
+@import url('./modalDetailCoffee.css');
 @import url('./modalWelcome.css');
-@import url('./coffeeCard.css');
-@import url('./detailCoffee.css');
-@import url('./basketModal.css');
 @import url('./orderCoffeeCard.css');
-@import url('./deliveryModal.css');
-@import url('./deliveryModalCard.css');
+@import url('./panel.css');
 
 body {
   margin: 0;

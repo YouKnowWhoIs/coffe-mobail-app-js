@@ -1,9 +1,9 @@
-import { orderCoffee } from './orderList.js';
+import { orderCoffee } from './orderCoffee.js';
 import { updatePrice } from './updatePrice.js';
 import { orderCoffeeButtom } from './orderCoffeeButtom.js';
-import { orderLocation } from './orderLocation.js';
+import { changeOrderLocation } from './changeOrderLocation.js';
 
-function basketModal() {
+function modalBasket() {
   const basketButton = document.querySelector('.icon-basket');
   const modalBasket = document.querySelector('.modal-basket-list');
 
@@ -40,7 +40,7 @@ function basketModal() {
             </span>
         </div>
 
-        <div class="basket-list"></div>
+        <div class="order-coffee-list"></div>
 
         <div class="price-details-conteiner">
             <h5>Payment Summary</h5>
@@ -66,7 +66,7 @@ function basketModal() {
     </div>
       `;
 
-    orderLocation();
+    changeOrderLocation();
 
     orderCoffee();
 
@@ -84,4 +84,4 @@ function basketModal() {
   });
 }
 
-basketModal();
+export default modalBasket();

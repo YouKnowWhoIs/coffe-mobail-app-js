@@ -3,20 +3,21 @@ import addBasket from './addBasket.js';
 import { sizeSelected } from './sizeSelected.js';
 import { favoriteCoffee } from './favoriteCoffee.js';
 
-const coffeeList = document.querySelector('.coffees-list');
-const modal = document.querySelector('.modal-detail-coffee');
+function modalDetailCoffee() {
+  const coffeeList = document.querySelector('.coffees-list');
+  const modal = document.querySelector('.modal-detail-coffee');
 
-coffeeList.addEventListener('click', event => {
-  const card = event.target.closest('.coffee-card');
+  coffeeList.addEventListener('click', event => {
+    const card = event.target.closest('.coffee-card');
 
-  if (card && card.id) {
-    const coffee = coffees.find(item => String(item.id) === card.id);
+    if (card && card.id) {
+      const coffee = coffees.find(item => String(item.id) === card.id);
 
-    if (coffee) {
-      modal.classList.add('open');
-      document.body.classList.add('no-scroll');
+      if (coffee) {
+        modal.classList.add('open');
+        document.body.classList.add('no-scroll');
 
-      modal.innerHTML = `
+        modal.innerHTML = `
       <div id=${coffee.id} class="detail-container">
         <div class="detail-header">
           <span class="close-button">
@@ -74,19 +75,22 @@ coffeeList.addEventListener('click', event => {
         </div>
       </div>`;
 
-      const closeButton = modal.querySelector('.close-button');
+        const closeButton = modal.querySelector('.close-button');
 
-      closeButton.addEventListener('click', () => {
-        modal.classList.remove('open');
-        document.body.classList.remove('no-scroll');
-        modal.innerHTML = '';
-      });
+        closeButton.addEventListener('click', () => {
+          modal.classList.remove('open');
+          document.body.classList.remove('no-scroll');
+          modal.innerHTML = '';
+        });
 
-      sizeSelected(coffee);
+        sizeSelected(coffee);
 
-      favoriteCoffee();
+        favoriteCoffee();
 
-      addBasket();
+        addBasket();
+      }
     }
-  }
-});
+  });
+}
+
+export default modalDetailCoffee();

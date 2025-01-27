@@ -1,10 +1,10 @@
-import './js/addBasket.js';
 import './js/modalWelkome.js';
 import './js/coffeeList.js';
-import './js/detailCoffee.js';
-import './js/coffeeSelected.js';
-import './js/filterCoffee.js';
-import './js/basketModal.js';
-import './js/deliveryModal.js';
+import './js/filterType.js';
+import './js/modalDetailCoffee.js';
 import './js/searcCoffeeName.js';
 import './js/location.js';
+import './js/modalDelivery.js';
+import './js/coffeeSelected.js';
+import './js/modalBasket.js';
+import './js/addBasket.js';

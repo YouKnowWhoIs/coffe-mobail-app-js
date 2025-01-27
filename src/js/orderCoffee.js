@@ -1,7 +1,7 @@
 import { updatePrice } from './updatePrice.js';
 
 export function orderCoffee() {
-  const orderConteiner = document.querySelector('.basket-list');
+  const orderConteiner = document.querySelector('.order-coffee-list');
 
   const coffeeData = JSON.parse(localStorage.getItem('coffeeData')) || [];
 

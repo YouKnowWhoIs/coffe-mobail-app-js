@@ -1,23 +1,30 @@
 .modal-welcome {
   position: fixed;
-  background-color: #050505;
-  width: 100vw;
-  height: 100vh;
   top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
   z-index: 999;
+  overflow-y: auto;
+  background-color: rgba(5, 5, 5, 1);
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity 0.5s ease,
+    visibility 0.5s ease;
 }
 
 .welcome-container {
-  position: fixed;
-  left: 48%;
-  transform: translate(-50%, -50%);
-  z-index: 1000;
-  max-width: 90%;
-  min-width: 300px;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 327px;
+  padding: 0 24px;
 }
 
 .welcome-container-hidden {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .welcome-background-image {
@@ -28,6 +35,7 @@
   position: absolute;
   z-index: 1;
   color: #fff;
+  width: 327px;
   text-align: center;
   background: transparent;
   padding: 24px 24px 54px 24px;

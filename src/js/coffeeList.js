@@ -45,4 +45,4 @@ export function coffeeList() {
   });
 }
 
-coffeeList();
+export default coffeeList();

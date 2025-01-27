@@ -16,4 +16,4 @@ function location() {
   });
 }
 
-location();
+export default location();

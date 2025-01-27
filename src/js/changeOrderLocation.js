@@ -1,4 +1,4 @@
-export function orderLocation() {
+export function changeOrderLocation() {
   const orderLocation = document.querySelector('.order-adress');
   const editAdressButton = document.querySelector('.button-edit');
 

@@ -104,7 +104,7 @@
   padding-right: 4px;
 }
 
-.basket-list::after {
+.order-coffee-list::after {
   content: '';
   border-bottom: solid 5px #ededed;
   margin: 16px -24px;
