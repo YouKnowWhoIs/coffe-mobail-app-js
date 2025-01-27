@@ -1,0 +1,205 @@
+.modal-basket-list {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  z-index: 20;
+  overflow-y: auto;
+}
+.modal-basket-list.open {
+  display: flex;
+}
+
+.modal-basket-conteiner {
+  background: #fff;
+  max-width: 500px;
+  width: 327px;
+  padding: 0 24px;
+}
+
+.basket-header {
+  padding: 24px 0;
+  display: flex;
+}
+
+.order {
+  font-weight: 600;
+  line-height: 120%;
+  font-size: 16px;
+  padding: 12.5px 0;
+}
+
+.delivery-select {
+  background-color: #ededed;
+  border-radius: 8px;
+  display: flex;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.deliver-button,
+.pick-up-button {
+  margin: 4px;
+  padding: 8px 47px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ededed;
+  line-height: 120%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.delivery-select-active {
+  background-color: #c67c4e;
+  color: #fff;
+  font-weight: 600;
+}
+
+.pick-up-select {
+  color: #a2a2a2;
+  text-decoration: line-through;
+}
+
+.detail-address::after {
+  content: '';
+  border-bottom: solid 1px #ededed;
+  width: 295px;
+  margin: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.detail-address h4 {
+  margin-bottom: 16px;
+}
+
+.detail-address p {
+  color: #a2a2a2;
+  font-size: 12px;
+  line-height: 120%;
+  padding-top: 4px;
+}
+
+.button-adres-conteiner {
+  display: flex;
+  gap: 8px;
+  padding-top: 16px;
+}
+
+.button-edit {
+  border: solid 1px #a2a2a2;
+  border-radius: 16px;
+  padding: 6px 12px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.icons-edit {
+  width: 15px;
+  height: 15px;
+  padding-right: 4px;
+}
+
+.order-coffee-list::after {
+  content: '';
+  border-bottom: solid 5px #ededed;
+  margin: 16px -24px;
+  display: flex;
+  justify-content: center;
+}
+
+.price-details-conteiner {
+  margin: 24px 0 32px 0;
+  padding-bottom: 158px;
+}
+
+.price-details-conteiner h5 {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.table-price {
+  width: 100%;
+}
+
+.total-caffe-price,
+.total-delivery-price {
+  line-height: 150%;
+  font-size: 14px;
+}
+
+.all-coffee-prise,
+.delivery-prise {
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  justify-content: end;
+}
+
+.promo-delivery-prise {
+  text-decoration: line-through;
+  font-weight: 500;
+  padding-left: 8px;
+}
+
+.total-price-conteiner {
+  margin: 0 -24px;
+  padding: 16px 24px 12px 24px;
+  background-color: #ededed;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  width: 327px;
+  position: fixed;
+  bottom: 0;
+}
+
+.icon-walet {
+  width: 20px;
+  height: 20px;
+  fill: #c67c4e;
+  float: left;
+  padding: 9.5px 9.5px 9.5px 0;
+}
+
+.cash {
+  line-height: 120%;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.total-price {
+  line-height: 150%;
+  font-weight: 600;
+  font-size: 12px;
+  color: #c67c4e;
+}
+
+.order-button {
+  border: none;
+  border-radius: 16px;
+  color: #fff;
+  background-color: #c67c4e;
+  padding: 16px 139px;
+  margin-top: 8px;
+  line-height: 150%;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.order-button-block {
+  color: #d5d5d5;
+  background-color: #8a5432;
+  cursor: not-allowed;
+}
+
+.city-dropdown {
+  margin: 0 10px;
+  padding: 0 5px;
+  border: 1px solid #a2a2a2;
+  border-radius: 6px;
+}

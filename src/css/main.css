@@ -8,13 +8,6 @@
   gap: 16px;
 }
 
-.input-decoration {
-  display: none;
-}
-.select-coffee::-webkit-scrollbar {
-  display: none;
-}
-
 .coffee-optional {
   background-color: #ededed;
   padding: 4px 8px;
@@ -28,6 +21,13 @@
 }
 label:has(input[type='radio']:checked) {
   border-color: #111;
+}
+
+.input-decoration {
+  display: none;
+}
+.select-coffee::-webkit-scrollbar {
+  display: none;
 }
 
 .active-coffee-optional {

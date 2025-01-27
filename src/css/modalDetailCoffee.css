@@ -18,6 +18,7 @@
   max-width: 500px;
   width: 327px;
   padding: 0 24px;
+  overflow-y: auto;
 }
 
 .detail-header {
@@ -42,7 +43,7 @@
 .icon-not-like {
   width: 24px;
   height: 24px;
-  padding: 10px 10px 10px 105px;
+  margin: 10px 10px 10px auto;
 }
 
 .img-details {
@@ -65,7 +66,6 @@
   line-height: 150%;
   font-weight: 600;
   font-size: 20px;
-  margin: 0 0 34px 0;
 }
 
 .details-rating-conteiner {
@@ -90,11 +90,16 @@
   padding-right: 4px;
 }
 
-.details-coments {
+.details-coments,
+.details-type {
   color: #a2a2a2;
   font-size: 12px;
   line-height: 210%;
   margin: 0;
+}
+
+.details-type {
+  margin-bottom: 16px;
 }
 
 .text-name-des {
@@ -107,6 +112,7 @@
 
 .details-size {
   margin-bottom: 24px;
+  padding-bottom: 80px;
 }
 
 .text-name-size {
@@ -175,7 +181,7 @@ label:has(input[type='radio']:checked) {
   padding: 0 0 8px 0;
 }
 
-.price {
+.price-text {
   font-weight: 600;
   line-height: 150%;
   font-size: 18px;

@@ -1,12 +1,36 @@
+@import url('./coffeeList.css');
+@import url('./deliveryCard.css');
+@import url('./footer.css');
 @import url('./header.css');
 @import url('./main.css');
-@import url('./footer.css');
-@import url('./panel.css');
+@import url('./modalBasket.css');
+@import url('./modalDelivery.css');
+@import url('./modalDetailCoffee.css');
 @import url('./modalWelcome.css');
-@import url('./coffeeCard.css');
-@import url('./detailCoffee.css');
+@import url('./orderCoffeeCard.css');
+@import url('./panel.css');
 
 body {
   margin: 0;
   font-family: Sora, sans-serif;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
 }

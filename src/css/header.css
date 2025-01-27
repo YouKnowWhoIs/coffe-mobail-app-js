@@ -36,19 +36,6 @@
   display: inline-block;
 }
 
-.search {
-  background: linear-gradient(
-    to right,
-    rgba(180, 180, 180, 0),
-    rgba(162, 162, 162, 0.1)
-  );
-  border: none;
-  border-radius: 12px;
-  padding: 17.5px 0 17.5px 44px;
-  margin: 0 16px 24px 0;
-  width: 214px;
-}
-
 .search-icon {
   position: absolute;
   width: 20px;
@@ -57,18 +44,18 @@
   padding: 16px 8px 16px 16px;
 }
 
-.seting-icon {
-  fill: #fff;
-  width: 20px;
-  height: 20px;
-  padding: 16px;
-  background-color: #c67c4e;
+#search {
+  background: linear-gradient(
+    to right,
+    rgba(180, 180, 180, 0),
+    rgba(162, 162, 162, 0.1)
+  );
+  border: none;
   border-radius: 12px;
-  cursor: pointer;
-}
-.seting-icon:hover {
-  background-color: #8a5432;
-  cursor: pointer;
+  padding: 17.5px 0 17.5px 44px;
+  margin: 0 0 24px 0;
+  width: 234px;
+  color: #fff;
 }
 
 .banner {

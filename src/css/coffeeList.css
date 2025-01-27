@@ -90,3 +90,10 @@
   fill: #fff;
   padding: 10px;
 }
+
+.not-favorite-text {
+  display: flex;
+  justify-content: center;
+  font-size: larger;
+  font-weight: 600;
+}

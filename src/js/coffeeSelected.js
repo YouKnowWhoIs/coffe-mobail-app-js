@@ -1,6 +1,6 @@
-const coffeeOptional = document.querySelectorAll('.coffee-optional');
-
 export function selectCoffeeOptional() {
+  const coffeeOptional = document.querySelectorAll('.coffee-optional');
+
   coffeeOptional.forEach(select => {
     select.addEventListener('click', () => {
       coffeeOptional.forEach(active => {
