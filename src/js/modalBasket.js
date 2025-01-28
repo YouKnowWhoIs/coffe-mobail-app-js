@@ -16,7 +16,7 @@ function modalBasket() {
         <div class="basket-header">
             <span class="close-button">
                 <svg class="icon-back">
-                <use href="../../public/icon/symbol-defs.svg#icon-back"/>
+                <use xlink:href="public//icon/symbol-defs.svg#icon-back"/>
                 </svg>
             </span>
             <span class="order">Order</span>
@@ -33,7 +33,7 @@ function modalBasket() {
             <span class="button-adres-conteiner">
                 <button class="button-edit">
                     <svg class="icons-edit">
-                        <use  href="../public/icon/symbol-defs.svg#icon-edit"/>
+                        <use xlink:href="public/icon/symbol-defs.svg#icon-edit"/>
                     </svg>
                 Edit Addres
                 </button>
@@ -57,7 +57,7 @@ function modalBasket() {
         </div>
         <div class="total-price-conteiner">
             <svg class="icon-walet">
-                <use  href="../public/icon/symbol-defs.svg#icon-wallet"/>
+                <use  xlink:href="public/icon/symbol-defs.svg#icon-wallet"/>
             </svg>
                 <span class="cash">Cash/Wallet</span>
                 <p class="total-price">$0.00</p>

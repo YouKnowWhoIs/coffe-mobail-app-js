@@ -17,7 +17,7 @@ export function renderCoffeeList(coffee) {
     <li id="${coffee.id}" class="coffee-card">
       <span class="rating">
         <svg class="icon-rating">
-          <use href="../../public/icon/symbol-defs.svg#icon-star1"/>
+          <use xlink:href="public/icon/symbol-defs.svg#icon-star1"/>
         </svg>
         <span class="rating-text">
         ${coffee.rating}
@@ -34,7 +34,7 @@ export function renderCoffeeList(coffee) {
         <span class="card-price">$ ${coffee.price}</span>
         <button class="card-button">
           <svg class="icon-plus">
-            <use href="../../public/icon/symbol-defs.svg#icon-plus"/>
+            <use xlink:href="public/icon/symbol-defs.svg#icon-plus"/>
           </svg>
         </button>
       </div>

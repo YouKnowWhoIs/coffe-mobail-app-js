@@ -27,7 +27,7 @@ export function toggleFavorite(itemId) {
     }
 
     favorite.innerHTML =
-      '<use href="../../public/icon/symbol-defs.svg#icon-heart1"/>';
+      '<use xlink:href="public/icon/symbol-defs.svg#icon-heart1"/>';
 
     iziToast.success({
       position: 'topRight',
@@ -38,7 +38,7 @@ export function toggleFavorite(itemId) {
     localStorage.setItem('favoriteCoffees', JSON.stringify(addCoffeeFavorite));
 
     favorite.innerHTML =
-      '<use href="../../public/icon/symbol-defs.svg#icon-heart" fill="#c67c4e" />';
+      '<use xlink:href="public/icon/symbol-defs.svg#icon-heart" fill="#c67c4e" />';
 
     iziToast.success({
       position: 'topRight',

@@ -31,11 +31,11 @@ export function orderCoffee() {
                 </span>
                 <span class="number-order-coffee">
                     <svg class="icons-order button-minus">
-                        <use href="../../public/icon/symbol-defs.svg#icon-minus" />
+                        <use xlink:href="public/icon/symbol-defs.svg#icon-minus" />
                     </svg>
                     <span class="order-number">${coffee.count}</span>
                     <svg class="icons-order button-plus">
-                        <use href="../../public/icon/symbol-defs.svg#icon-plus" />
+                        <use xlink:href="public/icon/symbol-defs.svg#icon-plus" />
                     </svg>
                 </span>
             </div>
