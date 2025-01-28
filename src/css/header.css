@@ -59,7 +59,6 @@
 }
 
 .banner {
-  /* background-image: url('public/image/banner.jpg'); */
   width: 100%;
   border-radius: 12px;
   color: #fff;
@@ -74,6 +73,6 @@
 }
 
 .banner-title {
-  padding: 27px 99px 13px 24px;
+  padding: 0 99px 13px 24px;
   margin: 0;
 }
