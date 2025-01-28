@@ -22,12 +22,12 @@ function modalDetailCoffee() {
         <div class="detail-header">
           <span class="close-button">
             <svg class="icon-back">
-              <use href="../../public/icon/symbol-defs.svg#icon-back"/>
+              <use xlink:href="public/icon/symbol-defs.svg#icon-back"/>
             </svg>
           </span>
         <span class="details">Detail</span>
         <svg class="icon-not-like">
-          <use href="../../public/icon/symbol-defs.svg#icon-heart1"/>
+          <use xlink:href="public//icon/symbol-defs.svg#icon-heart1"/>
         </svg>
         </div>
         <div>
@@ -36,7 +36,7 @@ function modalDetailCoffee() {
           <p class="details-type">${coffee.type}</p>
           <div class="details-rating-conteiner">
             <svg class="details-rating">
-              <use href="../../public/icon/symbol-defs.svg#icon-star1"/>
+              <use xlink:href="public/icon/symbol-defs.svg#icon-star1"/>
             </svg>
             <span class="details-coffee-raiting">${coffee.rating}</span>
             <span class="details-coments"> (${coffee.coments})</span>

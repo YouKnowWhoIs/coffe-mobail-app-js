@@ -11,10 +11,10 @@ export function favoriteCoffee() {
 
   if (addCoffeeFavorite.some(coffee => coffee.id === itemId)) {
     favorite.innerHTML =
-      '<use href="../../public/icon/symbol-defs.svg#icon-heart" fill="#c67c4e" />';
+      '<use xlink:href="public/icon/symbol-defs.svg#icon-heart" fill="#c67c4e" />';
   } else {
     favorite.innerHTML =
-      '<use href="../../public/icon/symbol-defs.svg#icon-heart1"/>';
+      '<use xlink:href="public/icon/symbol-defs.svg#icon-heart1"/>';
   }
 
   favorite.addEventListener('click', () => {

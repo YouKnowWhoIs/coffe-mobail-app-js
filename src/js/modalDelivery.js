@@ -13,7 +13,7 @@ function modalDelivery() {
         <div class="delivery-header">
             <span class="close-button">
                 <svg class="icon-back">
-                    <use href="../../public/icon/symbol-defs.svg#icon-back"/>
+                    <use xlink:href="public/icon/symbol-defs.svg#icon-back"/>
                  </svg>
             </span>
             <span class="delivery">Delivery</span>
@@ -26,7 +26,7 @@ function modalDelivery() {
         <div class="delivered-conteiner">
           <span>
             <svg class="icon-delivery">
-              <use href="../../public/icon/symbol-defs.svg#icon-delivery">
+              <use xlink:href="public//icon/symbol-defs.svg#icon-delivery">
             </svg>
           </span>
           <div>
@@ -38,7 +38,7 @@ function modalDelivery() {
         <div class="delivery-list"></div>
 
         <div class="delivery-courier-card">
-            <img class="delivery-courier-img" alt="courier" src="../../public/image/courier.jpg"/>
+            <img class="delivery-courier-img" alt="courier" src="public/image/courier.jpg"/>
             <div class="courier-details">
               <h4>Brooklyn Simmons</h4>
               <span class="personal-courier">Personal Courier</span>
@@ -46,7 +46,7 @@ function modalDelivery() {
 
             <button class="button-phone">
                 <svg class="icon-phone">
-                    <use href="../../public/icon/symbol-defs.svg#icon-phone">
+                    <use xlink:href="public/icon/symbol-defs.svg#icon-phone">
                 </svg>
             </button>
         </div>
