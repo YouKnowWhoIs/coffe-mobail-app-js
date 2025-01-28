@@ -12,7 +12,7 @@ function modalWelkome() {
       <div class="welcome-container">
         <img
           class="welcome-background-image"
-         src="public/image/6.jpg"
+         src="/image/6.jpg"
           alt="Coffee Shops Home Page"
         />
         <div class="welcome-content">
