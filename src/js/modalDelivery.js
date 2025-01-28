@@ -38,7 +38,7 @@ function modalDelivery() {
         <div class="delivery-list"></div>
 
         <div class="delivery-courier-card">
-            <img class="delivery-courier-img" alt="courier" src="../../public/image/courier.jpg"/>
+            <img class="delivery-courier-img" alt="courier" src="public/image/courier.jpg"/>
             <div class="courier-details">
               <h4>Brooklyn Simmons</h4>
               <span class="personal-courier">Personal Courier</span>
